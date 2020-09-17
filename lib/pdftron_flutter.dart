@@ -25,8 +25,7 @@ class PdftronFlutter {
   }
 
   static Future<void> initialize(String licenseKey) {
-    return _channel.invokeMethod(
-        'initialize', <String, dynamic>{'licenseKey': licenseKey});
+    return _channel.invokeMethod('initialize');
   }
 
   static Future<void> openDocument(String document,
@@ -39,11 +38,13 @@ class PdftronFlutter {
   }
 
   static Future<void> importAnnotationCommand(String xfdfCommand) {
-    return _channel.invokeMethod('importAnnotationCommand', <String, dynamic>{'xfdfCommand': xfdfCommand});
+    return _channel.invokeMethod('importAnnotationCommand',
+        <String, dynamic>{'xfdfCommand': xfdfCommand});
   }
 
   static Future<void> importBookmarkJson(String bookmarkJson) {
-    return _channel.invokeMethod('importBookmarkJson', <String, dynamic>{'bookmarkJson': bookmarkJson});
+    return _channel.invokeMethod(
+        'importBookmarkJson', <String, dynamic>{'bookmarkJson': bookmarkJson});
   }
 
   static Future<String> saveDocument() async {
