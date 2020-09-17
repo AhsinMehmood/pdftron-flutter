@@ -24,7 +24,7 @@ class PdftronFlutter {
     return version;
   }
 
-  static Future<void> initialize(String licenseKey) {
+  static Future<void> initialize() {
     return _channel.invokeMethod('initialize');
   }
 
